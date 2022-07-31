@@ -14,4 +14,5 @@
 - Ambient Shaders
 - Specular Shaders
 
+**EXAMPLE RENDER:**
 ![example render](images/example_render.png)
