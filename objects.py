@@ -60,11 +60,14 @@ class Camera:
 
                 t = np.dot(normal_vector.unpack(), light_ray_vector.unpack()) / (normal_magnitude * light_ray_magnitude) * object.reflectivity * light.intensity;
 
+                # Inverse Square Law
+                t = np.multiply(t, (light.distance ** 2) / (point.get_distance(light.position) ** 2))
+
                 color = Color3.from_iter(np.multiply(object.color.unpack(), t).astype(int));
                 color.clamp();
 
                 current_color = np.add(current_color, color.unpack());
-               # current_color = np.add(current_color, np.multiply(light.color, t).astype(int));
+                current_color = np.add(current_color, np.multiply(light.color.unpack(), t).astype(int));
 
         return current_color;
 
@@ -172,6 +175,6 @@ class Sphere(Object):
 
 class PointLight(Light):
 
-    def __init__(self, position, intensity, color):
+    def __init__(self, position, intensity, color, distance):
 
-        super().__init__(position, intensity, color);
+        super().__init__(position, intensity, color, distance);

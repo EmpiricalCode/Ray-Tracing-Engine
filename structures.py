@@ -8,9 +8,10 @@ class Object:
 
 class Light:
 
-    def __init__(self, position, intensity, color):
+    def __init__(self, position, intensity, color, distance):
         self.position = position;
         self.intensity = intensity;
         self.color = color;
         self.transparent = True;
+        self.distance = distance;
         self.type = "light";
