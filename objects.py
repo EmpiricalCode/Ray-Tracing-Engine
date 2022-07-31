@@ -66,8 +66,12 @@ class Camera:
                 color = Color3.from_iter(np.multiply(object.color.unpack(), t).astype(int));
                 color.clamp();
 
-                current_color = np.add(current_color, color.unpack());
-                current_color = np.add(current_color, np.multiply(light.color.unpack(), t).astype(int));
+                light_color = Color3.from_iter(np.multiply(light.color.unpack(), t).astype(int));
+                light_color.clamp();
+
+                current_color[0] = max(current_color[0], color.r, light_color.r);
+                current_color[1] = max(current_color[1], color.g, light_color.g);
+                current_color[2] = max(current_color[2], color.b, light_color.b);
 
         return current_color;
 
