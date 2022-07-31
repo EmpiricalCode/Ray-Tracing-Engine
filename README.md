@@ -10,5 +10,6 @@
 
 - Antialiasing
 - Render Planes
+- Inverse Square Law
 - Ambient Shaders
 - Specular Shaders
