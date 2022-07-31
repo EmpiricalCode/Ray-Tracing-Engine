@@ -3,16 +3,14 @@
 **DONE:**
 
 - Render Spheres
-- Lambertian/Diffuse Shaders
-- Render Shadows
+- Direct Illumination
 - Inverse Square Law
 
 **TODO:**
 
 - Antialiasing
+- Indirect Illumination
 - Render Planes
-- Ambient Shaders
-- Specular Shaders
 
 **EXAMPLE RENDER:**
 
