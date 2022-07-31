@@ -4,8 +4,8 @@ from objects import *;
 import matplotlib.pyplot as plt;
 
 environment = Environment();
-environment.add_object(Sphere(Vector3D(0, 0, 0), 2, Color3(100, 100, 100), 1, False));
-environment.add_object(Sphere(Vector3D(0, -105, 0), 100, Color3(100, 100, 100), 1, False));
+environment.add_object(Sphere(Vector3D(0, 0, 0), 2, Color3(50, 50, 50), 1, False));
+environment.add_object(Sphere(Vector3D(0, -105, 0), 100, Color3(50, 50, 50), 1, False));
 environment.add_object(PointLight(Vector3D(0, 5, -6), 2, Color3(0, 0, 255), 5));
 environment.add_object(PointLight(Vector3D(0, 8, 0), 2, Color3(255, 0, 0), 5));
 
